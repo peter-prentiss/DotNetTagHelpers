@@ -1,10 +1,22 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using DotNetTagHelpers.Models;
+
 namespace DotNetTagHelpers.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
-        public HomeController()
+        private IRepository repository;
+        public HomeController(IRepository repo)
         {
+            repository = repo;
+        }
+        public ViewResult Index() => View(repository.Cities);
+        public ViewResult Create() => View();
+        [HttpPost]
+        public IActionResult Create(City city)
+        {
+            repository.AddCity(city);
+            return RedirectToAction("Index");
         }
     }
 }
