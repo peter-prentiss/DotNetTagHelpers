@@ -2,7 +2,7 @@
 
 namespace DotNetTagHelpers.Infrastructure.TagHelpers
 {
-    [HtmlTargetElement("button", Attributes = "bs-button-color", ParentTag = "form")]
+    [HtmlTargetElement(Attributes = "bs-button-color", ParentTag = "form")]
     public class ButtonTagHelper : TagHelper
     {
         public string BsButtonColor { get; set; }
