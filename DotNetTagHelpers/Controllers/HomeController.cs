@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DotNetTagHelpers.Models;
+using System.Linq;
 
 namespace DotNetTagHelpers.Controllers
 {
@@ -13,6 +14,8 @@ namespace DotNetTagHelpers.Controllers
         }
 
         public ViewResult Index() => View(repository.Cities);
+
+        public ViewResult Edit() => View("Create", repository.Cities.First());
 
         public ViewResult Create() => View();
 
