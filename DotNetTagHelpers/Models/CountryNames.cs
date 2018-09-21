@@ -1,10 +1,10 @@
-﻿using System;
-namespace DotNetTagHelpers.Models
+﻿namespace DotNetTagHelpers.Models
 {
-    public class CountryNames
+    public enum CountryNames
     {
-        public CountryNames()
-        {
-        }
+        UK,
+        USA,
+        France,
+        China
     }
 }
