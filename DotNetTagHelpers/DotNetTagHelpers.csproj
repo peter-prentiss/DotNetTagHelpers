@@ -13,6 +13,7 @@
     <Folder Include="Views\Home\" />
     <Folder Include="Infrastructure\" />
     <Folder Include="Infrastructure\TagHelpers\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
   <ItemGroup>
