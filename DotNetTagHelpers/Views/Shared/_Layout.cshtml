@@ -3,17 +3,16 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Cities</title>
-    <script asp-src-include="/lib/jquery/dist/**/*.js"
-            asp-src-exclude="**.min.js"></script>
+    <environment names="development">
+        <script asp-src-include="/lib/jquery/dist/**/*.js"
+                asp-src-exclude="**.min.js"></script>
+    </environment>
+    <environment names="staging, production">
+        <script asp-src-include="/lib/jquery/dist/**/*.min.js"></script>
+    </environment>
     <link href="/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 </head>
 <body class="panel-body">
-    <environment names="development">
-        <div class="panel-body bg-info"><h2>This is Development</h2></div>
-    </environment>
-    <environment names="production">
-        <div class="panel-body bg-danger"><h2>This is Production</h2></div>
-    </environment>
     <div>@RenderBody()</div>
 </body>
 </html>
