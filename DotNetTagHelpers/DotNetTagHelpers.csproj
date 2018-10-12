@@ -14,6 +14,7 @@
     <Folder Include="Infrastructure\" />
     <Folder Include="Infrastructure\TagHelpers\" />
     <Folder Include="wwwroot\images\" />
+    <Folder Include="Components\" />
   </ItemGroup>
 
   <ItemGroup>
