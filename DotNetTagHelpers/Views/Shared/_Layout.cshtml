@@ -11,7 +11,7 @@
           rel="stylesheet" />
 </head>
 <body class="panel-body">
-    <cache expires-after="@TimeSpan.FromSeconds(15)">
+    <cache expires-on="@DateTime.Parse("2100-01-01")">
         @await Component.InvokeAsync("Time")
     </cache>
     <div>@RenderBody()</div>
