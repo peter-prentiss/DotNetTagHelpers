@@ -11,7 +11,7 @@
           rel="stylesheet" />
 </head>
 <body class="panel-body">
-    <cache expires-sliding="@TimeSpan.FromSeconds(10)">
+    <cache expires-sliding="@TimeSpan.FromSeconds(10)" vary-by-route="action">
         @await Component.InvokeAsync("Time")
     </cache>
     <div>@RenderBody()</div>
